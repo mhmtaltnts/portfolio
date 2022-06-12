@@ -1,17 +1,24 @@
 import React, { createContext, useState } from "react";
 
 export const ThemeContext = createContext({
-  isDarkTheme: true,
+  isDark: true,
+  isLang: "en",
+  toggleLang: () => {},
   toggleTheme: () => {},
 });
 
 function ThemeProvider({ children }) {
-  const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const [isDark, setIsDark] = useState(true);
+  const [isLang, setLang] = useState("en");
   const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
+    setIsDark(!isDark);
+  };
+
+  const toggleLang = () => {
+    setLang((pre) => !pre);
   };
   return (
-    <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDark, toggleTheme, isLang, toggleLang }}>
       {children}
     </ThemeContext.Provider>
   );

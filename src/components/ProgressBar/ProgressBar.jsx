@@ -3,8 +3,8 @@ import "./ProgressBar.scss";
 import { ThemeContext } from "../../context/ThemeContext";
 
 function ProgressBar({ title, amount }) {
-  const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
-  const color = isDarkTheme ? "#27ae60" : "#f56692";
+  const { isDark, toggle } = useContext(ThemeContext);
+  const color = isDark ? "#27ae60" : "#f56692";
   return (
     <div className="progress-bar">
       <p className="prog-title">{title}</p>

@@ -1,0 +1,38 @@
+[
+  {
+    "Home": {
+      "h1": {
+        "en": ["Hi I'm", "Web Developer"],
+        "tr": ["Merhaba Ben", "Web Geliştiricisi"]
+      },
+      "name": "Muhammet Altuntaş",
+      "p1": {
+        "tr": [
+          "Ben bir Web Geliştiricisiyim, güzel ve işlevsel web siteleri oluşturmayı seviyorum.",
+          "Web geliştiricisi olarak resmi bir eğitimim veya lisansım olmamasına rağmen. Aşağıdaki konularda ileri düzeyde bilgi ve becerilere sahibim"
+        ],
+        "en": [
+          "I'm a Web Developer, I love to create beautiful and functional websites.",
+          "Even though I don't have a formal education or license as a web developer.I have advanced knowledge and skills with:"
+        ]
+      },
+      "knowledge": {
+        "tr": [
+          "HTML/XHTML, CSS, JavaScript",
+          "Sunucu/istemci tarafı mimarisi",
+          "Python, PHP, Java, Node.js kodlama",
+          "Veri tabanını kullanma becerisi",
+          "ReactJS ile tek sayfalık uygulama oluşturma"
+        ],
+        "en": [
+          "HTML/XHTML, CSS, JavaScript",
+          "Server/client side architecture",
+          "Coding in Python, PHP, Java, Node.js",
+          "Ability to utilize a database",
+          "Creating single page application with ReactJS"
+        ]
+      }
+    },
+    "About": {}
+  }
+]

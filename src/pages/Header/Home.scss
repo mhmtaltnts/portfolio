@@ -59,6 +59,7 @@
       li {
         padding: 1rem 0 1rem 0;
         font-style: italic;
+        list-style-type: circle !important;
       }
     }
   }
@@ -67,61 +68,58 @@
 @media screen and (max-width: 600px) {
   header {
     padding: 0 !important;
-  }
 
-  .header-content {
-    grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 6rem;
-  }
+    .header-content {
+      grid-template-columns: repeat(1, 1fr);
+      padding-bottom: 6rem;
 
-  .left-header {
-    .h-shape {
-      display: none;
+      .left-header {
+        .h-shape {
+          display: none;
+        }
+        .image {
+          margin: 0 auto;
+          width: 90%;
+        }
+      }
+      .right-header {
+        grid-row: 1;
+        padding-right: 0rem !important;
+        width: 90%;
+        margin: 0 auto;
+        .name {
+          font-size: 2.5rem !important;
+          text-align: center;
+          padding-top: 3rem;
+        }
+      }
     }
   }
-  .right-header {
-    grid-row: 1;
-    padding-right: 0rem !important;
-    width: 90%;
-    margin: 0 auto;
-    .name {
-      font-size: 2.5rem !important;
-      text-align: center;
-      padding-top: 3rem;
-    }
-  }
-  .header-content .left-header .image {
-    margin: 0 auto;
-    width: 90%;
-  }
 }
-
-@media screen and (max-width: 1250px) {
-  .header-content .right-header {
-    padding-right: 9rem;
-  }
-}
-
 @media screen and (max-width: 970px) {
   .header-content {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
-  }
-
-  .left-header {
-    .h-shape {
-      display: none;
+    .left-header {
+      .h-shape {
+        display: none;
+      }
+    }
+    .right-header {
+      grid-row: 1;
+      padding-right: 0rem !important;
+      width: 90%;
+      margin: 0 auto;
+      .name {
+        font-size: 2.5rem !important;
+        text-align: center;
+        padding-top: 3rem;
+      }
     }
   }
-  .right-header {
-    grid-row: 1;
-    padding-right: 0rem !important;
-    width: 90%;
-    margin: 0 auto;
-    .name {
-      font-size: 2.5rem !important;
-      text-align: center;
-      padding-top: 3rem;
-    }
+}
+@media screen and (max-width: 1250px) {
+  .header-content .right-header {
+    padding-right: 9rem;
   }
 }

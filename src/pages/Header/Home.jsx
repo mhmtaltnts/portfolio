@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import DownLoadIcon from "../../components/DownLoadIcon/DownLoadIcon";
 import "./Home.scss";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const hero = "./src/assets/hero1.png";
 
 function Home() {
+  const { lang } = useContext(ThemeContext);
   return (
     <header className="container header active" id="home">
       <div className="header-content">
         <div className="left-header">
           <div className="h-shape"></div>
           <div className="image">
-            <img src={hero} alt="" />
+            <img src={hero} alt="hero" />
           </div>
         </div>
         <div className="right-header">
@@ -19,10 +22,11 @@ function Home() {
           </h1>
           <p>
             I'm a Web Developer, I love to create beautiful and functional
-            websites. I don't have a formal education or license as a web
-            developer.
+            websites.
+            <br />
+            Even though I don't have a formal education or license as a web
+            developer. I have advanced knowledge and skills with:
           </p>
-          <p>But I have advanced knowledge and skills with:</p>
           <ul className="header-list">
             <li>HTML/XHTML, CSS, JavaScript</li>
             <li>Server/client side architecture</li>
@@ -30,14 +34,7 @@ function Home() {
             <li>Ability to utilize a database</li>
             <li>Creating single page application with ReactJS</li>
           </ul>
-          <div className="btn-con">
-            <a href="" className="main-btn">
-              <span className="btn-text">Download CV</span>
-              <span className="btn-icon">
-                <i className="fas fa-download"></i>
-              </span>
-            </a>
-          </div>
+          <DownLoadIcon text="Download CV" />
         </div>
       </div>
     </header>

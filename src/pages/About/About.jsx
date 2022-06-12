@@ -5,10 +5,8 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import TimeLine from "../../components/TimeLine/TimeLine";
 import "./About.scss";
 const exp = [
-  { count: "650+", title1: "Projects", title2: "Completed" },
-  { count: "10+", title1: "Years of", title2: "Experience" },
-  { count: "30+", title1: "Happy", title2: "Clients" },
-  { count: "400+", title1: "Customers", title2: "reviews" },
+  { count: "19+", title1: "Projects", title2: "Completed" },
+  { count: "2+", title1: "Years of", title2: "Experience" },
 ];
 const edu = [
   { title: "html5", amount: "80%" },
@@ -21,12 +19,12 @@ const edu = [
 const life = [
   {
     duration: "1991-1996",
-    subject: "Basic, Pascal",
+    subject: "Basic, Fortran",
     where: "Marmara University",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasvero fugit.",
+    desc: "Years when I first met computers. I remember doing integral calculations with Fortran.",
   },
   {
-    duration: "1998-2000",
+    duration: "1996-2000",
     subject: "Word, Excell, Powerpoint",
     where: "Ivan Shahavishvili University",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasvero fugit.",
@@ -63,14 +61,22 @@ function About() {
         <div className="left-about">
           <h4>Information About me</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            labore nihil obcaecati consequatur. Debitis error doloremque, vero
-            eos vel nemo eius voluptatem dicta tenetur modi. <br />
+            I completed my education in the field of English Physics teaching.
+            During my university education, I took computer lessons as a minor
+            branch.
             <br />
-            La musica delectus dolore fugiat exercitationem a, ipsum quidem quo
-            enim natus accusamus labore dolores nam. Unde. Lorem ipsum dolor sit
-            amet consectetur, adipisicing elit. Harum non necessitatibus
-            deleniti eum soluta.
+            Six years ago I decided to go deep into coding. I have always been
+            interested in computer technology. Even when I was working as an
+            English Physics teacher, I couldn't stay away from the computer. I
+            spent most of my time in front of the computer. Firsly, I was
+            interested in 3D drawing and animation with computers. Because I was
+            thinking of designing games with Java.
+            <br />
+            <br />
+            After come across with React, I focused on Javascript, HTML, CSS.
+            Striving in different areas of the computer technology provided me
+            with extensive knowledge and experience about it. Now I am 2 years
+            experienced react developer. I have a lot to learn.
           </p>
           <DownLoadIcon text="Download CV" />
         </div>
