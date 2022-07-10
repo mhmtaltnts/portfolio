@@ -1,16 +1,13 @@
 import React from "react";
+import ContactForm from "../../components/ContactForm/ContactForm";
+import MainTitle from "../../components/MainTitle/MainTitle";
 import "./Contact.scss";
 
 function Contact() {
   return (
     <section class="container contact" id="contact">
       <div class="contact-container">
-        <div class="main-title">
-          <h2>
-            Contact <span>Me</span>
-            <span class="bg-text">Contact</span>
-          </h2>
-        </div>
+        <MainTitle txt1="Contact" txt2="Me" txt3="Contact" />
         <div class="contact-content-con">
           <div class="left-contact">
             <h4>Contact me here</h4>
@@ -81,32 +78,7 @@ function Contact() {
             </div>
           </div>
           <div class="right-contact">
-            <form action="" class="contact-form">
-              <div class="input-control i-c-2">
-                <input type="text" required placeholder="YOUR NAME" />
-                <input type="email" required placeholder="YOUR EMAIL" />
-              </div>
-              <div class="input-control">
-                <input type="text" required placeholder="ENTER SUBJECT" />
-              </div>
-              <div class="input-control">
-                <textarea
-                  name=""
-                  id=""
-                  cols="15"
-                  rows="8"
-                  placeholder="Message Here..."
-                ></textarea>
-              </div>
-              <div class="submit-btn">
-                <a href="#" class="main-btn">
-                  <span class="btn-text">Download CV</span>
-                  <span class="btn-icon">
-                    <i class="fas fa-download"></i>
-                  </span>
-                </a>
-              </div>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>

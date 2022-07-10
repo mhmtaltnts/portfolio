@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import DownLoadIcon from "../../components/DownLoadIcon/DownLoadIcon";
+import DownLoadButton from "../../components/DownLoadButton/DownLoadButton";
 import "./Home.scss";
 import { ThemeContext } from "../../context/ThemeContext";
 
@@ -34,7 +34,7 @@ function Home() {
             <li>Ability to utilize a database</li>
             <li>Creating single page application with ReactJS</li>
           </ul>
-          <DownLoadIcon text="Download CV" />
+          <DownLoadButton text="Download CV" />
         </div>
       </div>
     </header>

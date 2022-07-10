@@ -2,6 +2,7 @@ import React from "react";
 import Image from "../../components/Image/Image";
 import HoverItem from "../../components/HoverItem/HoverItem";
 import "./Portfolio.scss";
+import MainTitle from "../../components/MainTitle/MainTitle";
 
 const portfolios = [
   { img: "./src/assets/port1.jpg", alt: "", hrf: "#", icon: "fab fa-github" },
@@ -15,12 +16,7 @@ const portfolios = [
 function Portfolio() {
   return (
     <section className="container" id="portfolio">
-      <div className="main-title">
-        <h2>
-          My <span>Portfolio</span>
-          <span className="bg-text">My Work</span>
-        </h2>
-      </div>
+      <MainTitle txt1="My" txt2="Work" txt3="Work" />
       <p className="port-text">
         Here is some of my work that I've done in various programming languages.
       </p>

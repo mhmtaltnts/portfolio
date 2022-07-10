@@ -82,73 +82,9 @@ section {
   }
 }
 
-/*Independed components*/
-
-.main-title {
-  color: var(--color-white);
-  text-align: center;
-  h2 {
-    position: relative;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 700;
-    span {
-      color: var(--color-secondary);
-    }
-    .bg-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: var(--color-grey-5);
-      transition: all 0.4s ease-in-out;
-      z-index: -1;
-      transform: translate(-50%, -50%);
-      font-weight: 800;
-      font-size: 6.3rem;
-    }
-  }
-}
-
-//Media
-@media screen and (max-width: 600px) {
-  .main-title {
-    h2 {
-      font-size: 2rem;
-      span {
-        font-size: 2.3rem;
-      }
-      .bg-text {
-        font-size: 2.3rem;
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 1432px) {
   .container {
     padding: 7rem 10rem;
-  }
-
-  .main-title {
-    h2 {
-      .bg-text {
-        font-size: 5.5rem;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1070px) {
-  .main-title {
-    h2 {
-      font-size: 4rem;
-      span {
-        font-size: 4rem;
-      }
-      .bg-text {
-        font-size: 4.5rem;
-      }
-    }
   }
 }
 
@@ -161,29 +97,9 @@ section {
   .container {
     padding: 7rem 3rem;
   }
-
-  .main-title {
-    h2 {
-      font-size: 3rem;
-      span {
-        font-size: 3rem;
-      }
-      .bg-text {
-        font-size: 4rem;
-      }
-    }
+}
+@media screen and (max-width: 700px) {
+  .about-container .right-about {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-/*
-@import "./components/ProgressBar/ProgressBar";
-@import "./components/Controllers/Controllers";
-@import "./components/DownLoadIcon/DownLoadIcon.scss";
-@import "./components/Experience/Experience.scss";
-@import "./components/HoverItem/HoverItem.scss";
-@import "./components/Image/Image.scss";
-@import "./components/ToggleThemeIcon/ToggleThemeIcon.scss";
-@import "./components/TimeLine/TimeLine.scss";
-@import "./pages/About/About.scss";
-@import "./pages/Portfolio/Portfolio.scss";
-@import "./pages/Header/Home.scss";
-*/

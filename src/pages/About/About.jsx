@@ -1,6 +1,7 @@
 import React from "react";
-import DownLoadIcon from "../../components/DownLoadIcon/DownLoadIcon";
+import DownLoadButton from "../../components/DownLoadButton/DownLoadButton";
 import Experience from "../../components/Experience/Experience";
+import MainTitle from "../../components/MainTitle/MainTitle";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import TimeLine from "../../components/TimeLine/TimeLine";
 import "./About.scss";
@@ -51,12 +52,7 @@ const life = [
 function About() {
   return (
     <section className="container about" id="about">
-      <div className="main-title">
-        <h2>
-          About <span>me</span>
-          <span className="bg-text">my stats</span>
-        </h2>
-      </div>
+      <MainTitle txt1="About" txt2="me" txt3="Stats" />
       <div className="about-container">
         <div className="left-about">
           <h4>Information About me</h4>
@@ -78,7 +74,7 @@ function About() {
             with extensive knowledge and experience about it. Now I am 2 years
             experienced react developer. I have a lot to learn.
           </p>
-          <DownLoadIcon text="Download CV" />
+          <DownLoadButton text="Download CV" />
         </div>
         <div className="right-about">
           {exp.map((item) => (
