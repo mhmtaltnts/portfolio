@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
-import DownLoadIcon from "../../components/DownLoadIcon/DownLoadIcon";
-import "./Home.scss";
-import { ThemeContext } from "../../context/ThemeContext";
+import React, { useContext } from "react"
+import DownLoadIcon from "../../components/DownLoadIcon/DownLoadIcon"
+import "./Home.scss"
+import { ThemeContext } from "../../context/ThemeContext"
 
-const hero = "./src/assets/hero1.png";
+const hero = "./src/assets/hero1.png"
 
 function Home() {
-  const { lang } = useContext(ThemeContext);
+  const { isEn } = useContext(ThemeContext)
   return (
     <header className="container header active" id="home">
       <div className="header-content">
@@ -18,14 +18,12 @@ function Home() {
         </div>
         <div className="right-header">
           <h1 className="name">
-            Hi, I'm <span>Mehmet Altuntaş.</span> A Web Developer.
+            Hi, I'm <span>Muhammet Altuntaş.</span> A Web Developer.
           </h1>
           <p>
-            I'm a Web Developer, I love to create beautiful and functional
-            websites.
+            I'm a Web Developer, I love to create beautiful and functional websites.
             <br />
-            Even though I don't have a formal education or license as a web
-            developer. I have advanced knowledge and skills with:
+            Even though I don't have a formal education or license as a web developer. I have advanced knowledge and skills with:
           </p>
           <ul className="header-list">
             <li>HTML/XHTML, CSS, JavaScript</li>
@@ -38,7 +36,7 @@ function Home() {
         </div>
       </div>
     </header>
-  );
+  )
 }
 
-export default Home;
+export default Home
