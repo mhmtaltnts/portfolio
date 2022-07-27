@@ -16,3 +16,20 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .contact-item {
+    flex-direction: column;
+    margin: 1rem 0;
+    p {
+      font-size: 15px;
+      color: var(--color-grey-2);
+    }
+    span {
+      font-size: 15px;
+    }
+    .icon {
+      grid-template-columns: 25px 1fr;
+    }
+  }
+}
