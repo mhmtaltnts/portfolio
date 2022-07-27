@@ -4,9 +4,27 @@ import "./Home.scss"
 import { ThemeContext } from "../../context/ThemeContext"
 
 const hero = "./src/assets/hero1.png"
+const home = {
+  en: {
+    h1_1: "Hi, I'm",
+    h1_2: "Muhammet Altuntaş.",
+    h1_3: "A Web Developer",
+    p1_1: "I'm a Web Developer, I love to create beautiful and functional websites.",
+    p1_2: "I have advanced and intermediate knowledge and skills with:",
+    ul1: ["HTML/XHTML, CSS, JavaScript", "Server/client side architecture", "Coding in Python, PHP, Java, Node.js", "Ability to utilize a database", "Creating single page application with ReactJS"]
+  },
+  tr: {
+    h1_1: "Selam, Ben",
+    h1_2: "Muhammet Altuntaş.",
+    h1_3: "Web Geliştirici",
+    p1_1: "Bir Web geliştirici olarak işlevsel ve güzel web siteleri oluşturmaktan hoşlanırım.",
+    p1_2: "Aşağıdaki konularda ileri ve orta düzeyde becerilere sahibim:",
+    ul1: ["HTML/XHTML, CSS, JavaScript", "Server/client side mimari", "Python, PHP, Java, Node.js ile kodlama", "Veri tabanı kullanımı", "ReactJS'la tek sayfa uygulama yaratımı"]
+  }
+}
 
 function Home() {
-  const { isEn } = useContext(ThemeContext)
+  const { lang } = useContext(ThemeContext)
   return (
     <header className="container header active" id="home">
       <div className="header-content">
@@ -18,19 +36,17 @@ function Home() {
         </div>
         <div className="right-header">
           <h1 className="name">
-            Hi, I'm <span>Muhammet Altuntaş.</span> A Web Developer.
+            {home[lang].h1_1} <span>{home[lang].h1_2}</span> {home[lang].h1_3}
           </h1>
           <p>
-            I'm a Web Developer, I love to create beautiful and functional websites.
+            {home[lang].p1_1}
             <br />
-            Even though I don't have a formal education or license as a web developer. I have advanced knowledge and skills with:
+            {home[lang].p1_2}
           </p>
           <ul className="header-list">
-            <li>HTML/XHTML, CSS, JavaScript</li>
-            <li>Server/client side architecture</li>
-            <li>Coding in Python, PHP, Java, Node.js</li>
-            <li>Ability to utilize a database</li>
-            <li>Creating single page application with ReactJS</li>
+            {home[lang].ul1.map(item => (
+              <li>{item}</li>
+            ))}
           </ul>
           <DownLoadIcon text="Download CV" />
         </div>

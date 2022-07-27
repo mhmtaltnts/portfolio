@@ -1,19 +1,26 @@
 import React, { useContext } from "react"
 import DownLoadIcon from "../../components/DownLoadIcon/DownLoadIcon"
 import Experience from "../../components/Experience/Experience"
+import MainTitle from "../../components/MainTitle/MainTitle"
 import ProgressBar from "../../components/ProgressBar/ProgressBar"
 import TimeLine from "../../components/TimeLine/TimeLine"
 import { ThemeContext } from "../../context/ThemeContext"
 import "./About.scss"
-const exp = [
-  { count: "19+", title1: "Projects", title2: "Completed" },
-  { count: "2+", title1: "Years of", title2: "Experience" }
-]
+const exp = {
+  en: [
+    { count: "25+", title1: "Projects", title2: "Completed" },
+    { count: "4+", title1: "Years of", title2: "Experience" }
+  ],
+  tr: [
+    { count: "25+", title1: "Proje", title2: "Tamamlandı" },
+    { count: "6+", title1: "Yıl", title2: "Deneyim" }
+  ]
+}
 const edu = [
   { title: "html5", amount: "80%" },
   { title: "css3", amount: "95%" },
   { title: "javascript", amount: "85%" },
-  { title: "ReactJS", amount: "67%" },
+  { title: "ReactJS", amount: "83%" },
   { title: "NodeJS", amount: "60%" },
   { title: "Python", amount: "80%" }
 ]
@@ -23,7 +30,7 @@ const life = {
       duration: "1991-1996",
       subject: "Basic, Fortran",
       where: "Marmara Universitesi",
-      desc: "Bilgisayarla tanıştığım ilk yıllar. Fortran'la integral hesabı yapıyorduk."
+      desc: "Bilgisayarla tanıştığım ilk yıllar. Fortran'la integral hesabı yapmayı öğrendik. Basic çalıştık."
     },
     {
       duration: "1996-2000",
@@ -47,7 +54,7 @@ const life = {
       duration: "2016-bugüne",
       subject: "Yapay Zeka, Kuantum Bilgisayarlar, Web Geliştirme",
       where: "Bireysel Çalışmalar",
-      desc: "Son altı yıl bilgisayara baştan başladım diyebilirim. C++, Java, C#, Python, JavaScript çalıştım ve öğrendim. Yapay zeka ve kuantum bilgisayarlar konusunda çalışmalar yaptım. Son olarak web geliştirme konusunda uzman olmaya karar verdim. Bu amaç doğrultusunda React'ı seçtim. React konusunda uzman olmaya çalışıyorum. Epeyce mesafe kat ettim bu portfolyo sitemi react'la  bir html/css şablon kullanarak hazırladım."
+      desc: "Son altı yıl bilgisayara baştan başladım diyebilirim. C++, Java, C#, Python, JavaScript çalıştım ve temel bilgileri öğrendim. Yapay zeka ve kuantum bilgisayarlar konusunda çalışmalar yaptım. Son olarak web geliştirme konusunda uzman olmaya karar verdim. Bu amaç doğrultusunda React'ı seçtim. Bu portfolyo site MacLinz tarafından hazırlanan html/css şablonu üzerine benim tarafımdan reactjs ile yapılmıştır."
     }
   ],
   en: [
@@ -83,44 +90,59 @@ const life = {
     }
   ]
 }
+const about = {
+  en: {
+    h2: "About Me",
+    h2_span: "my stats",
+    p1_1: "I completed my education in the field of English Physics teaching. During my university education, I took computer lessons as a minor branch.",
+    p1_2: "Six years ago I decided to go deep into coding.",
+    p1_3: "After come across with React, I focused on Javascript, HTML, CSS. Striving in different areas of the computer technology provided me with extensive knowledge and experience about it. Now I am 2 years experienced react developer. I have a lot to learn.",
+    h4_1: "My Skills",
+    h4_2: "My Timeline"
+  },
+  tr: {
+    h2: "Hakkımda",
+    h2_span: "İstatistikler",
+    p1_1: "Eğitimimi İngilizce Fizik öğretmenliği alanında tamamladım. Üniversite eğitimim sırasında yan dal olarak bilgisayar dersleri aldım.",
+    p1_2: "Altı yıl önce kodlamanın derinliklerine inmeye karar verdim.",
+    p1_3: "React ile tanıştıktan sonra Javascript, HTML, CSS üzerine yoğunlaştım. Reactjs öğrenme sürecinde 25 proje tamamladım; github'a yükledim. Şimdi 6 yıl deneyimli web geliştiriciyim. Öğrenecek çok şeyim var.",
+    h4_1: "Beceriler",
+    h4_2: "Zaman Şeridi"
+  }
+}
 function About() {
   const { lang } = useContext(ThemeContext)
   return (
     <section className="container about" id="about">
-      <div className="main-title">
-        <h2>
-          About <span>me</span>
-          <span className="bg-text">my stats</span>
-        </h2>
-      </div>
+      <MainTitle title1={about[lang].h2} title2={about[lang].h2_span} />
       <div className="about-container">
         <div className="left-about">
-          <h4>Information About me</h4>
+          <h4>{about[lang].h4}</h4>
           <p>
-            I completed my education in the field of English Physics teaching. During my university education, I took computer lessons as a minor branch.
+            {about[lang].p1_1}
             <br />
-            Six years ago I decided to go deep into coding. I have always been interested in computer technology. Even when I was working as an English Physics teacher, I couldn't stay away from the computer. I spent most of my time in front of the computer. Firsly, I was interested in 3D drawing and animation with computers. Because I was thinking of designing games with Java.
+            {about[lang].p1_2}
             <br />
             <br />
-            After come across with React, I focused on Javascript, HTML, CSS. Striving in different areas of the computer technology provided me with extensive knowledge and experience about it. Now I am 2 years experienced react developer. I have a lot to learn.
+            {about[lang].p1_3}
           </p>
           <DownLoadIcon text="Download CV" />
         </div>
         <div className="right-about">
-          {exp.map(item => (
+          {exp[lang].map(item => (
             <Experience key={item.title1 + item.title2} count={item.count} title1={item.title1} title2={item.title2} />
           ))}
         </div>
       </div>
       <div className="about-stats">
-        <h4 className="stat-title">My Skills</h4>
+        <h4 className="stat-title">{about[lang].h4_1}</h4>
         <div className="progress-bars">
           {edu.map(item => (
             <ProgressBar key={item.title} title={item.title} amount={item.amount} cls={item.cls} />
           ))}
         </div>
       </div>
-      <h4 className="stat-title">My Timeline</h4>
+      <h4 className="stat-title">{about[lang].h4_2}</h4>
       <div className="timeline">
         {life[lang].map(item => (
           <TimeLine key={item.duration} duration={item.duration} subject={item.subject} where={item.where} desc={item.desc} />
