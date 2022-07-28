@@ -65,7 +65,7 @@ const life = {
       desc: "Years when I first met computers. I remember doing integral calculations with Fortran."
     },
     {
-      duration: "1996-2000",
+      duration: "1998-2000",
       subject: "Mathlab, Word, Excell, Powerpoint",
       where: "Ivan Shahavishvili University",
       desc: "I have master's degree. I have completed my thesis on quantum physics. I used Mathlab, word, excel and powerpoint during the thesis process. I met Maya and 3D Max. Around this time, I became interested in 3D drawings and animation."
@@ -126,7 +126,6 @@ function About() {
             <br />
             {about[lang].p1_3}
           </p>
-          <DownLoadIcon text="Download CV" />
         </div>
         <div className="right-about">
           {exp[lang].map(item => (

@@ -1,7 +1,7 @@
 .contact-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   p {
     margin: 0.3rem 0 !important;
     padding: 0 !important;
@@ -14,22 +14,25 @@
       align-items: center;
       font-size: 1.3rem;
     }
+    span {
+      color: var(--color-secondary);
+    }
   }
 }
 
 @media screen and (max-width: 600px) {
   .contact-item {
+    display: flex;
     flex-direction: column;
+    justify-content: flex-start !important;
     margin: 1rem 0;
     p {
+      align-self: flex-start;
       font-size: 15px;
       color: var(--color-grey-2);
     }
     span {
       font-size: 15px;
-    }
-    .icon {
-      grid-template-columns: 25px 1fr;
     }
   }
 }
