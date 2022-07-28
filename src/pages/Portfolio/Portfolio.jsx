@@ -6,12 +6,12 @@ import MainTitle from "../../components/MainTitle/MainTitle"
 import { ThemeContext } from "../../context/ThemeContext"
 
 const portfolios = [
-  { img: "./src/assets/port1.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/portfolio", icon: "fab fa-github" },
-  { img: "./src/assets/port2.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/react-hooks", icon: "fab fa-github" },
-  { img: "./src/assets/port3.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/react-typescript", icon: "fab fa-github" },
-  { img: "./src/assets/port4.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/react_redux_app", icon: "fab fa-github" },
-  { img: "./src/assets/port5.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/custom_react_hook", icon: "fab fa-github" },
-  { img: "./src/assets/port6.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/mental", icon: "fab fa-github" }
+  { img: "../assets/port1.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/portfolio", icon: "fab fa-github" },
+  { img: "../assets/port2.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/react-hooks", icon: "fab fa-github" },
+  { img: "../assets/port3.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/react-typescript", icon: "fab fa-github" },
+  { img: "../assets/port4.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/react_redux_app", icon: "fab fa-github" },
+  { img: "../assets/port5.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/custom_react_hook", icon: "fab fa-github" },
+  { img: "../assets/port6.jpg", alt: "", hrf: "https://github.com/mhmtaltnts/mental", icon: "fab fa-github" }
 ]
 
 const title = {

@@ -6,9 +6,9 @@ function ContactItem({ icon, via, value }) {
     <div className="contact-item">
       <div className="icon">
         <i className={icon}></i>
-        <span>{via}</span>
+        <span>{via} :</span>
       </div>
-      <p>: {value} </p>
+      <p>{value} </p>
     </div>
   )
 }

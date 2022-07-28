@@ -13,12 +13,60 @@
       position: absolute;
       top: 50%;
       left: 50%;
+      padding-top: 1rem;
       color: var(--color-grey-5);
       transition: all 0.4s ease-in-out;
       z-index: -1;
       transform: translate(-50%, -50%);
       font-weight: 800;
       font-size: 6.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-title {
+    h2 {
+      font-size: 1.5rem;
+
+      .bg-text {
+        font-size: 1.9rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1432px) {
+  .main-title {
+    h2 {
+      .bg-text {
+        font-size: 5.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .main-title {
+    h2 {
+      font-size: 4rem;
+      span {
+        font-size: 4rem;
+      }
+      .bg-text {
+        font-size: 4.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main-title {
+    h2 {
+      font-size: 1.7rem;
+      .bg-text {
+        font-size: 2rem;
+      }
     }
   }
 }

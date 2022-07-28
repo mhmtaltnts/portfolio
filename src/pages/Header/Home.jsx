@@ -3,7 +3,7 @@ import DownLoadIcon from "../../components/DownLoadIcon/DownLoadIcon"
 import "./Home.scss"
 import { ThemeContext } from "../../context/ThemeContext"
 
-const hero = "./src/assets/hero1.png"
+const hero = "../assets/hero1.png"
 const home = {
   en: {
     h1_1: "Hi, I'm",
@@ -48,7 +48,7 @@ function Home() {
               <li>{item}</li>
             ))}
           </ul>
-          <DownLoadIcon text="Download CV" />
+          <DownLoadIcon text="Download CV" hrf="../assets/resume-CV.pdf" />
         </div>
       </div>
     </header>
